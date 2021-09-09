@@ -1,0 +1,381 @@
+{
+	"variables": [],
+	"info": {
+		"name": "EmployeeRestRequests",
+		"_postman_id": "208e1529-4b92-b75d-87a8-dc79248c0f36",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all employees",
+			"request": {
+				"url": "localhost:8080/api/employee/all",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46YWRtaW4=",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get employee by id",
+			"request": {
+				"url": "localhost:8080/api/employee/5",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46YWRtaW4=",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get all departments",
+			"request": {
+				"url": "localhost:8080/api/department/all",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46YWRtaW4=",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get department by id",
+			"request": {
+				"url": "localhost:8080/api/department/1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46YWRtaW4=",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update employee by id",
+			"request": {
+				"url": "localhost:8080/api/employee/5",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46YWRtaW4=",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 5,\n    \"firstName\": \"TestName\",\n    \"lastName\": \"TestSurname\",\n    \"department\": {\n        \"id\": 2,\n        \"name\": \"HR\"\n    },\n    \"jobTitle\": \"Senior HR\",\n    \"gender\": \"FEMALE\",\n    \"birthDate\": \"1989-09-10T21:00:00.000+00:00\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update department by id",
+			"request": {
+				"url": "localhost:8080/api/department/1",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46YWRtaW4=",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"name\": \"Test dep name\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete employee by id",
+			"request": {
+				"url": "localhost:8080/api/employee/10",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46YWRtaW4=",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete department by id",
+			"request": {
+				"url": "localhost:8080/api/department/3",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46YWRtaW4=",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create employee",
+			"request": {
+				"url": "localhost:8080/api/employee/add",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46YWRtaW4=",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"New name\",\n    \"lastName\": \"New surname\",\n    \"department\": null,\n    \"jobTitle\": \"New position\",\n    \"gender\": \"FEMALE\",\n    \"birthDate\": \"1989-09-10T21:00:00.000+00:00\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create department",
+			"request": {
+				"url": "localhost:8080/api/department/add",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46YWRtaW4=",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"New department name\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get employee by non exists id",
+			"request": {
+				"url": "localhost:8080/api/employee/-1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46YWRtaW4=",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get department by non exists id",
+			"request": {
+				"url": "localhost:8080/api/department/-1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46YWRtaW4=",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update employee with wrong parametrs",
+			"request": {
+				"url": "localhost:8080/api/employee/5",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46YWRtaW4=",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 6,\n    \"firstName\": \"TestName\",\n    \"lastName\": \"TestSurname\",\n    \"department\": {\n        \"id\": 2,\n        \"name\": \"HR\"\n    },\n    \"jobTitle\": \"Senior HR\",\n    \"gender\": \"FEMALE\",\n    \"birthDate\": \"1989-09-10T21:00:00.000+00:00\"\n}"
+				},
+				"description": "Path variable id must be equal with id in request body"
+			},
+			"response": []
+		},
+		{
+			"name": "Update employee with non exists id",
+			"request": {
+				"url": "localhost:8080/api/employee/-1",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46YWRtaW4=",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": -1,\n    \"firstName\": \"TestName\",\n    \"lastName\": \"TestSurname\",\n    \"department\": {\n        \"id\": 2,\n        \"name\": \"HR\"\n    },\n    \"jobTitle\": \"Senior HR\",\n    \"gender\": \"FEMALE\",\n    \"birthDate\": \"1989-09-10T21:00:00.000+00:00\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update department with wrong paramentrs",
+			"request": {
+				"url": "localhost:8080/api/department/1",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46YWRtaW4=",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"2\",\n\t\"name\": \"Test name\"\n}"
+				},
+				"description": "Path variable id must be equal with id in request body"
+			},
+			"response": []
+		},
+		{
+			"name": "Update department with non exists id",
+			"request": {
+				"url": "localhost:8080/api/department/-1",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46YWRtaW4=",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"-1\",\n\t\"name\": \"Test name\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete employee by non exists id",
+			"request": {
+				"url": "localhost:8080/api/employee/-1",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46YWRtaW4=",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete department by non exists id",
+			"request": {
+				"url": "localhost:8080/api/department/-1",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46YWRtaW4=",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
